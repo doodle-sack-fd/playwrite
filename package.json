@@ -1,0 +1,20 @@
+{
+	"name": "playwrite",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"test:chrome": "npx playwright test --project='Google Chrome'",
+		"test:ui": "npx playwright test --ui",
+		"html:report": "npx playwright show-report custom-reports/playwright-report",
+		"test:codegen": "npx playwright codegen"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"devDependencies": {
+		"@playwright/test": "^1.48.2",
+		"@types/node": "^22.8.7",
+		"dotenv": "^16.4.5"
+	}
+}
