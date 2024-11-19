@@ -77,12 +77,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 747,
+                  "duration": 1038,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-11-19T10:46:18.699Z",
+                  "startTime": "2024-11-19T11:11:35.990Z",
                   "attachments": [
                     {
                       "name": "trace",
@@ -105,8 +105,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-11-19T10:46:18.044Z",
-    "duration": 1640.2750000000015,
+    "startTime": "2024-11-19T11:11:35.337Z",
+    "duration": 2069.4809999999998,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
