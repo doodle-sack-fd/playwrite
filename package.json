@@ -6,7 +6,8 @@
 		"test:chrome": "npx playwright test --project='Google Chrome'",
 		"test:ui": "npx playwright test --ui",
 		"html:report": "npx playwright show-report custom-reports/playwright-report",
-		"test:codegen": "npx playwright codegen"
+		"test:codegen": "npx playwright codegen",
+		 "test": "npx playwright test --reporter=html --output custom-reports/playwright-report/"
 	},
 	"keywords": [],
 	"author": "",
