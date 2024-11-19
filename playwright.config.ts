@@ -10,25 +10,29 @@ import path from 'path';
 dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 /**
+ * Чтение переменных окружения из файла.
+ * https://github.com/motdotla/dotenv
+ */
+// import dotenv from 'dotenv';
+// import path from 'path';
+// dotenv.config({ path: path.resolve(__dirname, '.env') });
+
+/**
  * См. https://playwright.dev/docs/test-configuration.
  */
+
 export default defineConfig({
 	testDir: './tests',
 	/* Запуск тестов в файлах параллельно */
-	fullyParallel: false,
+	fullyParallel: true,
 	/* Прервать сборку на CI, если случайно оставить test.only в исходном коде */
 	forbidOnly: !!process.env.CI,
 	/* Повторить попытку только на CI */
 	retries: process.env.CI ? 2 : 0,
 	/* Отключить параллельное выполнение тестов на CI */
-	workers: 1,
+	workers: process.env.CI ? 1 : undefined,
 	/* Репортер для использования. См. https://playwright.dev/docs/test-reporters */
-	outputDir: './custom-reports/test-results', // Указываем путь для сохранения артефактов
-
-	reporter: [
-		['html', { outputFolder: './custom-reports/playwright-report' }], // Путь для HTML-отчета
-		['json', { outputFile: './custom-reports/test-results.json' }], // JSON-отчет
-	],
+	reporter: 'html',
 	/* Общие настройки для всех проектов ниже. См. https://playwright.dev/docs/api/class-testoptions. */
 	use: {
 		/* Базовый URL для использования в действиях, таких как `await page.goto('/')`. */
